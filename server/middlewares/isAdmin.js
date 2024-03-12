@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const User = require('../user');
+const User = require('../models/user');
 
 module.exports = async function checkAdmin(req, res, next) {
   try {

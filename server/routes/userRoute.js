@@ -1,9 +1,9 @@
 const { Router } = require('express');
-const User = require('./user');
+const User = require('../models/user');
 const bcrypt = require('bcryptjs');
-const checkAuth = require('./middlewares/checkAuth');
+const checkAuth = require('../middlewares/checkAuth');
 const jwt = require("jsonwebtoken");
-const isAdmin = require('./middlewares/isAdmin');
+const isAdmin = require('../middlewares/isAdmin');
 const router = new Router();
 
 router.get('/users', async (req, res, next) => {
