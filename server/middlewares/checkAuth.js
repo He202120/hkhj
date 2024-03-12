@@ -14,3 +14,5 @@ module.exports = function (req, res, next) {
     console.error(e);
   }
 };
+
+//checkauth
