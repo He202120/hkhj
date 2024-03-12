@@ -5,8 +5,8 @@ POST http://localhost:8000/users
 Content-Type: application/json
 
 {
-    "name": "BU$HI",
-    "email": "bushi@j2.fr",
+    "name": "aaa$HI",
+    "email": "j5@j2.fr",
     "password": "Azerty123!"
 }
 
@@ -23,7 +23,7 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:8000/users/65e4e0d5e233b3b2fb669c06
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWU0ZGEwZTRjYjdiYzEzODAwMzlhOWIiLCJpYXQiOjE3MDk0OTg2MzMsImV4cCI6MTcxNzI3NDYzM30.ofM0IErBhjfLmZDc57_B3g2P1HYYwUzkS5Ojtyi6OCw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWYwNzhjMzJhYjg2YjczMWM1ODRhZmQiLCJpYXQiOjE3MTAyNTgzNzQsImV4cCI6MTcxODAzNDM3NH0.c90hAxqSbAu6xeBNNvpp4x5z6NJ4BBoUzqP7IEpn4LE
 
 ###
 POST http://localhost:8000/login

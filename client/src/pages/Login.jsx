@@ -15,8 +15,7 @@ const App = () => {
       });
       setMessage("Bien connecté");
     } catch (error) {
-      console.error(error.message);
-      setMessage("Mauvaises informations d'identification");
+         
     }
   };
 
@@ -50,5 +49,6 @@ const App = () => {
 };
 
 export default App;
+
 
 
