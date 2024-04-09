@@ -30,6 +30,7 @@ a{
 }
 
 a:hover{
-  color: rgb(47, 255, 134);
-  text-shadow: 2px 2px black;
+  /*color: rgb(47, 255, 134);
+  text-shadow: 2px 2px black; */
+  /*text-decoration: underline; */
 }

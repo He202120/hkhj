@@ -5,9 +5,9 @@ POST http://localhost:8000/users
 Content-Type: application/json
 
 {
-    "name": "client$HI",
-    "email": "j5@j2.fr",
-    "password": "Azerty123!"
+    "name": "client",
+    "email": "david.addi@yahoo.fr",
+    "password": "abc"
 }
 
 ###
@@ -30,6 +30,6 @@ POST http://localhost:8000/login
 Content-Type: application/json
 
 {
-    "email": "j5@j2.fr",
-    "password": "Azerty123!"
+    "email": "david.addi@yahoo.fr",
+    "password": "abc"
 }

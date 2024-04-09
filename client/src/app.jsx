@@ -16,7 +16,7 @@ function App(){
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}/>
-          <Route path="connexion" element={<Login />}/>
+          <Route path="login" element={<Login />}/>
           <Route path="register" element={<Register />}/>
           <Route path="*" element={<NoPage />}/>
       </Routes>
@@ -29,3 +29,4 @@ export default App
 //Appliquer les changements dans la page
 const page = ReactDOM.createRoot(document.getElementById('root'));
 page.render(<App />);
+

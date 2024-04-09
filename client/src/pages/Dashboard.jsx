@@ -1,13 +1,12 @@
-import { useRouteError } from "react-router-dom";
+import React from 'react'
 
-export default function Dashboard() {
+const Dashboard = () => {
   return (
-    <div id="dashboard">
-      <h1>Dashboard</h1>
-      <p></p>
+    <div>
+      
     </div>
-  );
+  )
 }
 
-
+export default Dashboard
 

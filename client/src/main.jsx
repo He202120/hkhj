@@ -9,6 +9,12 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import ErrorPage from "./pages/ErrorPage";
+import { ClerkProvider } from "@clerk/clerk-react";
+import { frFR } from "@clerk/localizations";
+import CompoCreator from "./pages/CompoCreator";
+import Admin from "./pages/Admin";
+
+const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 const router = createBrowserRouter([
   {
@@ -24,12 +30,31 @@ const router = createBrowserRouter([
     path: "/auth/login",
     element: <Login />
   },
+  {
+    path: "/coach/composition",
+    element: <CompoCreator />
+  },
+  {
+    path: "/admin/overview",
+    element: <Admin />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+      <ClerkProvider publishableKey={publishableKey} localization={frFR}>
+        <RouterProvider router={router} />
+      </ClerkProvider>
   </React.StrictMode>
 );
+
+
+
+
+
+
+
+
+
 
 
