@@ -1,8 +1,6 @@
-
-import '../App.css'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import NavBar from '../components/NavBar'
+import '../app.css'
+import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
 import UpcomingMatches from '../layouts/UpcomingMatches'
 import DataTable from '../components/DataTable'
 
@@ -24,5 +22,14 @@ function Home() {
 }
 
 export default Home
+
+
+
+
+
+
+
+
+
 
 

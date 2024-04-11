@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+/*import axios from 'axios';
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Terminal } from "lucide-react"
 import { useNavigate } from 'react-router-dom';
-import { SignUp } from "@clerk/clerk-react";
+import { SignUp } from "@clerk/clerk-react"; */
 
 /* 
 const Register = () => {
@@ -97,10 +97,12 @@ const Register = () => {
 export default function Register() {
   return (
       <div className="flex justify-center mt-20">
-        <SignUp />
+        Se connecter
       </div>
   )
 }
+
+
 
 
 

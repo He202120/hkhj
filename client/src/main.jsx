@@ -9,12 +9,11 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import ErrorPage from "./pages/ErrorPage";
-import { ClerkProvider } from "@clerk/clerk-react";
-import { frFR } from "@clerk/localizations";
 import CompoCreator from "./pages/CompoCreator";
 import Admin from "./pages/Admin";
-
-const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+import Gestionnaire from "./pages/Gestionnaire";
+import Agenda from "./pages/Agenda";
+import Gestionnaire_inscription from "./pages/Gestionnaire_inscription";
 
 const router = createBrowserRouter([
   {
@@ -37,16 +36,36 @@ const router = createBrowserRouter([
   {
     path: "/admin/overview",
     element: <Admin />
+  },
+  {
+    path: "/admin/gestion",
+    element: <Gestionnaire />
+  },
+  {
+    path: "/admin/gestion-inscriptions",
+    element: <Gestionnaire_inscription />
+  },
+  {
+    path: "/agenda",
+    element: <Agenda />
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-      <ClerkProvider publishableKey={publishableKey} localization={frFR}>
-        <RouterProvider router={router} />
-      </ClerkProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
+
+
+
+
+
+
+
+
+
+
 
 
 

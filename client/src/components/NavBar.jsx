@@ -6,7 +6,7 @@ import { BiLogoFacebook } from "react-icons/bi";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { BsTwitterX } from "react-icons/bs";
 import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
-import "../App.css"
+import "../app.css"
 
 export default function NavBar() {
   return (
@@ -72,16 +72,10 @@ export default function NavBar() {
             href="#">Gestionnaire</Link>
         </nav>
         <div className="hidden lg:flex">
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-
-          <SignedOut>
-            <Button variant="rfc" to="auth/register" className="mr-4 text-white">
-              <Link to="auth/register" className="text-white">S'inscrire</Link>
-            </Button>
-            <Button variant="secondary" to="auth/login"><Link to="auth/login">Se connecter</Link></Button>
-          </SignedOut>
+          <Button variant="rfc" to="auth/register" className="mr-4 text-white">
+            <Link to="auth/register" className="text-white">S'inscrire</Link>
+          </Button>
+          <Button variant="secondary" to="auth/login"><Link to="auth/login">Se connecter</Link></Button>
         </div>
       </header>
     </>
@@ -108,6 +102,9 @@ function MenuIcon(props) {
     </svg>
   )
 }
+
+
+
 
 
 
