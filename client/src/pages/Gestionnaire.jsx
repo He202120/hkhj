@@ -1,28 +1,37 @@
-import Liste_membre from '@/components/Gestion/Liste_membre.jsx'
-import Liste_attente from '@/components/Gestion/Liste_attente.jsx'
-import { useNavigate } from 'react-router-dom'
-import "./CSS/Gestionnaire.css"
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import DataHeader from '../components/DataTable/DataHeader';
+import DataHeadCol from '../components/DataTable/DataHeadCol';
+import DataLine from '@/components/DataTable/DataLine';
+import DataLineCell from '@/components/DataTable/DataLineCell';
+import DataTable from '@/components/DataTable';
+import NavBar from '@/components/NavBar';
+import { Button } from '@/components/ui/button';
+import PlayersManagmentLayout from '@/layouts/PlayersManagmentLayout';
 
-function Gestionnaire(){
-
-    const redirect = () => {
-        document.location.href="/gestionnaire_inscription";
+const getCookie = (name) => {
+    const cookies = document.cookie.split(';');
+    for (let cookie of cookies) {
+      const [cookieName, cookieValue] = cookie.split('=');
+      if (cookieName.trim() === name) {
+        return cookieValue;
+      }
     }
+    return null;
+};
 
-    const getInscription = () => {
-        useNavigate("/gestion-inscriptions", {replace : true});
-    }
 
+function Gestionnaire() {
     return (
         <>
-            <Liste_membre />
-            <Liste_attente /> 
-            <button className="inscriptgestion" onClick={redirect}>Inscription</button>
+            <NavBar></NavBar>
+            <PlayersManagmentLayout />
         </>
-    );
+    )
 }
 
-export default Gestionnaire
+export default Gestionnaire;
+
 
 
 

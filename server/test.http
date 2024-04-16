@@ -1,11 +1,13 @@
-GET http://localhost:8000/users
+GET http://localhost:8000/players
 
 ###
 POST http://localhost:8000/users
 Content-Type: application/json
 
 {
-    "name": "client",
+    "firstName": "client",
+    "lastName": "client",
+    "phone": "+2546",
     "email": "david.addi@yahoo.fr",
     "password": "abc"
 }
@@ -30,6 +32,6 @@ POST http://localhost:8000/login
 Content-Type: application/json
 
 {
-    "email": "david.addi@yahoo.fr",
-    "password": "abc"
+    "email": "david.a@yahoo.fr",
+    "password": "123"
 }

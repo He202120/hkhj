@@ -15,8 +15,8 @@ router.post("/login", async (req, res, next) => {
     if (!isPasswordValid) {
       return res.status(422).json({ email: "Identifiants incorrects" });
     }
-    const token = jwt.sign({ sub: user._id }, "strongSecret", {
-      expiresIn: "90 days",
+    const token = jwt.sign({ sub: user._id, role: user.role }, "strongSecret", {
+      expiresIn: "4h",
     });
     res.json({ token });
   } catch (err) {

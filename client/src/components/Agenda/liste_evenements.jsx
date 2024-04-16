@@ -10,11 +10,11 @@ function Liste_evenement() {
     useEffect(() => {
         axios.get("http://localhost:8000/agenda")
             .then(res => {
-                console.log("Données reçues de la base de données :", res.data); // Ajout du console.log
+                console.log("Données reçues de la base de données :", res.data); 
                 const eventsData = res.data.map(event => ({
                     title: event.evenements,
-                    start: new Date(event.date.split('T')[0] + "T" + event.start), // Combinez la date et l'heure pour créer une date JS valide
-                    end: new Date(event.date.split('T')[0] + "T" + event.end), // Utilisez la même heure de début et de fin pour simplifier
+                    start: new Date(event.date.split('T')[0] + "T" + event.start), 
+                    end: new Date(event.date.split('T')[0] + "T" + event.end),
                 }));
                 console.log(eventsData)
                 setEvents(eventsData);
@@ -37,4 +37,5 @@ function Liste_evenement() {
 }
 
 export default Liste_evenement;
+
 

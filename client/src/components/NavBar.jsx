@@ -5,8 +5,14 @@ import Logo from "./Logo";
 import { BiLogoFacebook } from "react-icons/bi";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { BsTwitterX } from "react-icons/bs";
-import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
+import SignedIn from "./SignedIn";
+import SignedOut from "./SignedOut";
+import { CgProfile } from "react-icons/cg";
+import { FaSignOutAlt } from "react-icons/fa";
+import UserIcon from "@/components/UserIcon";
+import IsAdmin from "./isAdmin";
 import "../app.css"
+import logo from '../assets/wetteren_logo.svg';
 
 export default function NavBar() {
   return (
@@ -40,42 +46,55 @@ export default function NavBar() {
             <div className="grid gap-2 py-6">
               <span className="text-lg font-semibold">RFC Wetteren</span>
               <hr />
-              <Link className="flex w-full items-center py-2 text-base font-semibold " to="#">Acceuil</Link>
-              <Link className="flex w-full items-center py-2 text-base font-semibold " to="#">Agenda</Link>
-              <Link className="flex w-full items-center py-2 text-base font-semibold " to="#">Magasin</Link>
+              <Link className="flex w-full items-center py-2 text-base font-semibold " to="/">Acceuil</Link>
+              <Link className="flex w-full items-center py-2 text-base font-semibold " to="/agenda">Agenda</Link>
+              <Link className="flex w-full items-center py-2 text-base font-semibold " to="/auth/candidat">Postuler au club</Link>
               <Link className="flex w-full items-center py-2 text-base font-semibold " to="#">Actualité</Link>   
-              <Link className="flex w-full items-center py-2 text-base font-semibold " to="#">Gestionnaire</Link>   
-              <Button variant="rfc" to="auth/register">S'inscrire</Button>
-              <Button variant="secondary" to="auth/login">Se connecter</Button>
+              <Link className="flex w-full items-center py-2 text-base font-semibold " to="/admin/gestion">Gestionnaire</Link>   
+              <SignedIn>
+                <UserIcon className="flex justify-center"/>
+              </SignedIn>
+              <SignedOut>
+                <Button variant="rfc" to="auth/register" className="mr-4 text-white">
+                  <Link to="auth/register" className="text-white pl-2 pr-2">S'inscrire</Link>
+                </Button>
+                <Button variant="secondary" to="auth/login"><Link to="auth/login">Se connecter</Link></Button>
+              </SignedOut>
             </div>
           </SheetContent>
         </Sheet>
-        <Link className="mr-6 hidden lg:flex items-center" to="#">
-          <Logo className="h-12 w-12" />
+        <Link className="mr-6 hidden lg:flex items-center" to="/">
+          <img src={logo} className="h-12 w-12" alt="Logo du RFC" />
           <span className="ml-2 align-middle text-xl font-semibold">RFC Wetteren</span>
         </Link>
         <nav className="hidden space-x-4 lg:flex flex-1 min-w-0 items-center justify-center">
           <Link
             className="font-semibold rounded-md px-3 py-2 text-sm transition-colors hover:underline hover:text-green-800 underline-offset-8"
-            href="#">Acceuil</Link>
+            to="/">Acceuil</Link>
           <Link
             className="font-semibold rounded-md px-3 py-2 text-sm transition-colors hover:underline hover:text-green-800 underline-offset-8"
-            href="#">Agenda</Link>
+            to="/agenda">Agenda</Link>
           <Link 
             className="font-semibold rounded-md px-3 py-2 text-sm transition-colors hover:underline hover:text-green-800 underline-offset-8"
-            href="#">Magasin</Link>
+            to="/auth/candidat">Postuler au club</Link>
           <Link 
             className="font-semibold rounded-md px-3 py-2 text-sm transition-colors hover:underline hover:text-green-800 underline-offset-8"
-            href="#">Actualité</Link>
-          <Link 
-            className="font-semibold rounded-md px-3 py-2 text-sm transition-colors hover:underline hover:text-green-800 underline-offset-8"
-            href="#">Gestionnaire</Link>
+            to="#">Actualité</Link>
+          <IsAdmin>
+            <Link className="font-semibold rounded-md px-3 py-2 text-sm transition-colors hover:underline hover:text-green-800 underline-offset-8"
+              to="/admin/gestion">Gestionnaire</Link>
+          </IsAdmin>
         </nav>
         <div className="hidden lg:flex">
-          <Button variant="rfc" to="auth/register" className="mr-4 text-white">
-            <Link to="auth/register" className="text-white">S'inscrire</Link>
-          </Button>
-          <Button variant="secondary" to="auth/login"><Link to="auth/login">Se connecter</Link></Button>
+          <SignedIn>
+            <UserIcon/>
+          </SignedIn>
+          <SignedOut>
+            <Button variant="rfc" to="auth/register" className="mr-4 text-white">
+              <Link to="auth/register" className="text-white">S'inscrire</Link>
+            </Button>
+            <Button variant="secondary" to="auth/login"><Link to="auth/login">Se connecter</Link></Button>
+          </SignedOut>
         </div>
       </header>
     </>
@@ -102,50 +121,5 @@ function MenuIcon(props) {
     </svg>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
