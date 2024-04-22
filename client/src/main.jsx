@@ -17,6 +17,7 @@ import Gestionnaire_inscription from "./pages/Gestionnaire_inscription";
 import Candidat from "./pages/Candidat";
 import Dashboard from "./pages/account/Dashboard";
 import Profile from "./pages/account/Profile";
+import Composition from "./pages/Composition/Composition";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
   {
     path: "/auth/candidat",
     element: <Candidat />
+  },
+  {
+    path: "/composition",
+    element: <Composition />
   },
 ]);
 

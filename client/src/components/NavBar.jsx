@@ -70,7 +70,7 @@ export default function NavBar() {
         <nav className="hidden space-x-4 lg:flex flex-1 min-w-0 items-center justify-center">
           <Link
             className="font-semibold rounded-md px-3 py-2 text-sm transition-colors hover:underline hover:text-green-800 underline-offset-8"
-            to="/">Acceuil</Link>
+            to="/">Accueil</Link>
           <Link
             className="font-semibold rounded-md px-3 py-2 text-sm transition-colors hover:underline hover:text-green-800 underline-offset-8"
             to="/agenda">Agenda</Link>
@@ -80,6 +80,9 @@ export default function NavBar() {
           <Link 
             className="font-semibold rounded-md px-3 py-2 text-sm transition-colors hover:underline hover:text-green-800 underline-offset-8"
             to="#">Actualité</Link>
+          <Link 
+            className="font-semibold rounded-md px-3 py-2 text-sm transition-colors hover:underline hover:text-green-800 underline-offset-8"
+            to="/composition">Composition</Link>
           <IsAdmin>
             <Link className="font-semibold rounded-md px-3 py-2 text-sm transition-colors hover:underline hover:text-green-800 underline-offset-8"
               to="/admin/gestion">Gestionnaire</Link>
