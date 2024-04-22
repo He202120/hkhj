@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Image from "../assets/image.png";
-import Logo from "../assets/logo.png";
+import Image from "../assets/image.jpg";
+import Logo from "../assets/logo.svg";
 import GoogleSvg from "../assets/icons8-google.svg";
 import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa6";
@@ -99,10 +99,6 @@ const Login = () => {
               </div>
               <div className="login-center-buttons">
                 <button type="submit">Log In</button>
-                <button type="submit">
-                  <img src={GoogleSvg} alt="" />
-                  Log In with Google
-                </button>
               </div>
             </form>
           </div>

@@ -14,7 +14,7 @@
   }
   
   .login-left img{
-    width: 400px;
+    width: 1000px;
   }
   
   .login-right{
@@ -173,8 +173,10 @@
   
   .login-bottom-p{
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
     padding-bottom: 40px;
+    margin-bottom: 400px;
+    margin-top: -200px;
   }
   
   .login-bottom-p a{

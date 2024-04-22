@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 
+ {/*la variable token va être générée à partir du token qui est stocké en local càd dans le navigateur.*/}
 const Dashboard = () => {
   const [ token, setToken ] = useState(JSON.parse(localStorage.getItem("auth")) || "");
   const [ data, setData ] = useState({});
@@ -30,7 +31,7 @@ const Dashboard = () => {
   useEffect(() => {
     fetchLuckyNumber();
     if(token === ""){
-      navigate("/login");
+      navigate("/");
       toast.warn("Please login first to access dashboard");
     }
   }, [token]);
